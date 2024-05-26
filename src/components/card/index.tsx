@@ -27,7 +27,7 @@ const GameCard: React.FC<GameCardProps> = ({
       onMouseLeave={onMouseLeave}
     >
       <img
-        src={`https://gba-proj-rom.vercel.app/${image}`}
+        src={`${image}`}
         alt={name}
         className="rounded-t-lg h-48 w-full object-cover"
       />
