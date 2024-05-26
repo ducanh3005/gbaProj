@@ -1,7 +1,7 @@
 import { PaginatedResponse } from '@/types/paging';
 import { Product } from '@/types/product';
 import { NextResponse } from 'next/server';
-import productData from '@/asstes/product.json';
+import productData from '@/asstes/products.json';
 
 export async function GET(req: Request): Promise<NextResponse<PaginatedResponse<Product>>> {
   const { searchParams } = new URL(req.url);
