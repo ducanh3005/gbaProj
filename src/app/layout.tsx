@@ -6,6 +6,8 @@ import '@/styles/globals.css';
 import '@/styles/colors.css';
 
 import { siteConfig } from '@/constant/config';
+import { ErrorProvider } from '@/context/ErrorContext';
+import RootLayoutContent from '@/components/layout/RootLayoutContent';
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -56,7 +58,16 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>{children}</body>
+      <body>
+        <ErrorProvider>
+          <RootLayoutContent>
+            <div className="flex-grow flex flex-col items-center">
+              {/* <Header /> */}
+              {children}
+            </div>
+          </RootLayoutContent>
+        </ErrorProvider>
+      </body>
     </html>
   );
 }
