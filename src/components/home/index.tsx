@@ -98,19 +98,21 @@ export const Home = () => {
           )}
           <h2 className="text-center mt-10">{selectedCategory === 'All' ? 'All Products' : selectedCategory}</h2>
           <section className="mt-10">
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6">
-              {filteredProducts.map(product => (
-                <GameCard
-                  key={product.id}
-                  id={product.id}
-                  image={product.image}
-                  name={product.name}
-                  downloaded={product.downloaded}
-                  downloadLink={product.downloadLink}
-                  onMouseEnter={() => setHoveredProduct(product.id)}
-                  onMouseLeave={() => setHoveredProduct(undefined)}
-                />
-              ))}
+            <div className="container mx-auto">
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-6">
+                {filteredProducts.map(product => (
+                    <GameCard
+                        key={product.id}
+                        id={product.id}
+                        image={product.image}
+                        name={product.name}
+                        downloaded={product.downloaded}
+                        downloadLink={product.downloadLink}
+                        onMouseEnter={() => setHoveredProduct(product.id)}
+                        onMouseLeave={() => setHoveredProduct(undefined)}
+                    />
+                ))}
+              </div>
             </div>
           </section>
         </div>
