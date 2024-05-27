@@ -1,1 +1,1 @@
-# gba001
+# Dự án gbaproj sử dụng Typescript + Nextjs + React
